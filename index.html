@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio Andressa Neres</title>
+  <meta name="description" content="Portfólio de Andressa Neres - Relacionamento, Negócios e Tecnologia" />
+  <meta property="og:title" content="Portfólio de Andressa Neres" />
+  <meta property="og:description" content="Explore as experiências, habilidades e projetos de Andressa Neres" />
+  <meta property="og:image" content="https://andressaneres.github.io/portfolio-andressa/capa.png" />
+  <meta property="og:url" content="https://andressaneres.github.io/portfolio-andressa/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-pic img {
+      width: 220px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+      color: #f9fafb;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #9ca3af;
+      min-height: 1.5rem;
+    }
+
+    nav.social-links {
+      margin: 1.5rem 0;
+    }
+
+    nav.social-links a {
+      color: #eee;
+      margin: 0 0.8rem;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    nav.social-links a:hover {
+      color: #3b82f6;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+      color: #f9fafb;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+      color: #d1d5db;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #f3f4f6;
+    }
+
+    .card p em {
+      font-style: italic;
+      font-weight: 400;
+      color: #9ca3af;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      margin: 0;
+    }
+
+    .card ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 0;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+
+    /* Botão tema */
+    #themeToggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: #eee;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: color 0.3s ease;
+    }
+    #themeToggle:hover {
+      color: #3b82f6;
+    }
+
+    /* Tema claro */
+    body.dark-theme {
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+    body.dark-theme .card {
+      background-color: #e5e7eb;
+      color: #1f2937;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    }
+    body.dark-theme nav.social-links a {
+      color: #111827;
+    }
+    body.dark-theme nav.social-links a:hover {
+      color: #2563eb;
+    }
+    body.dark-theme #themeToggle {
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão alternar tema -->
+  <button id="themeToggle" aria-label="Alternar tema" title="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <div class="profile-pic">
+      <img src="andressa-sem-fundo.png.png" alt="Andressa Neres" />
+    </div>
+    <h1>Andressa Neres</h1>
+    <p class="subtitle"><span id="typed-text"></span></p>
+
+    <nav class="social-links" aria-label="Redes sociais e contato">
+      <a href="mailto:andressaneres124@gmail.com" title="Enviar Email" aria-label="Enviar Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+5511910305559" title="Ligar" aria-label="Ligar"><i class="fas fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/andressa-santos-neres-%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%E2%9A%A7%EF%B8%8F-5750a3263/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/andressaneres" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </nav>
+
+    <a href="curriculo-andressa.pdf" download class="btn-primary" title="Baixar Currículo">
+      <i class="fas fa-download"></i> Baixar Currículo
+    </a>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou uma profissional comprometida, com uma abordagem rápida na resolução de problemas. Estou sempre em busca de novos desafios para contribuir de forma significativa para o crescimento das empresas. Minha habilidade em trabalho em equipe, gerenciamento de múltiplas tarefas e capacidade de aprendizado rápido me tornam ativa e valiosa para equipes dinâmicas. Sou comunicativa, autodidata, dinâmica e proativa, e acredito no poder da aprendizagem mútua.
+      </p>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-users text-blue-500"></i> Trabalho em equipe
+        </div>
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-chess-queen text-blue-500"></i> Liderança
+        </div>
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-lightbulb text-blue-500"></i> Pensamento criativo
+        </div>
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-tools text-blue-500"></i> Resolução de problemas
+        </div>
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-comments text-blue-500"></i> Atendimento ativo e receptivo
+        </div>
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-laptop-code text-blue-500"></i> Sistema TASY e programação
+        </div>
+        <div class="card flex items-center gap-3">
+          <i class="fas fa-brain text-blue-500"></i> Autogestão e comunicação eficaz
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <h2>Experiência Profissional</h2>
+
+      <article class="card">
+        <h3>Analista de Relacionamento Pleno | Aggrega Benefícios</h3>
+        <p><em>Nov 2024 – Atual</em></p>
+        <ul>
+          <li>Atendimento aos clientes de forma ativa e receptiva.</li>
+          <li>Autorização de procedimentos (Eletivo, urgência e emergência).</li>
+          <li>Contato direto com auditoria médica para autorização de casos urgentes.</li>
+          <li>Solicitação de remoção aérea e terrestre quando necessário.</li>
+          <li>Utilização do sistema TASY.</li>
+          <li>Encarregada de guia de atendimento para pacientes crônicos, gestantes e em tratamento oncológico.</li>
+          <li>Coordenação de plantões presenciais e palestras mensais.</li>
+          <li>Atuação na área de Gestão de Saúde e Bem-Estar, agendando palestras e atividades.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Concierge Hospitalar | Prevent Senior</h3>
+        <p><em>Jan 2019 – Jan 2023</em></p>
+        <ul>
+          <li>Atendimento personalizado para pacientes e visitantes.</li>
+          <li>Fornecimento de informações sobre procedimentos e serviços hospitalares.</li>
+          <li>Preenchimento de declarações de óbito e acompanhamento de pacientes.</li>
+          <li>Filtragem de reclamações e melhoria da experiência do cliente.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Auxiliar Administrativo / Auxiliar de Faturamento | AACD</h3>
+        <p><em>Jul 2016 – Jun 2018</em></p>
+        <ul>
+          <li>Atuação em faturamento hospitalar em três setores (CM, CT, CDI).</li>
+          <li>Autorização de procedimentos junto às operadoras e sistemas municipais.</li>
+          <li>Recepção e abertura de fichas de pacientes, conferência de pedidos médicos.</li>
+          <li>Contato telefônico para ausência de pacientes.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Assistente de Atendimento ao Cliente | Life Empresarial Saúde</h3>
+        <p><em>Dez 2013 – Jan 2016</em></p>
+      </article>
+    </section>
+
+    <section id="formacao">
+      <h2>Formação Acadêmica</h2>
+
+      <article class="card">
+        <h3>Análise e Desenvolvimento de Sistemas</h3>
+        <p><em>Faculdade Estácio • 2024 (Cursando)</em></p>
+      </article>
+
+      <article class="card">
+        <h3>Serviço Social</h3>
+        <p><em>Cruzeiro do Sul • 2024 (Cursando)</em></p>
+      </article>
+    </section>
+
+    <section id="cursos">
+      <h2>Cursos Complementares</h2>
+      <ul class="card list-disc list-inside">
+        <li>Curso de Inglês Básico - CNA</li>
+        <li>Metodologia Agile Scrum - Scrum Educacional</li>
+        <li>Automatização de Processos com Python - Curso em Vídeo</li>
+        <li>Inglês para Comunicação Profissional - Udemy</li>
+        <li>Atendimento ao Cliente - SENAC</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Andressa Neres — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // Typed.js para efeito de texto dinâmico
+    document.addEventListener('DOMContentLoaded', () => {
+      const typed = new Typed('#typed-text', {
+        strings: ['Relacionamento', 'Negócios', 'Tecnologia'],
+        typeSpeed: 90,
+        backSpeed: 60,
+        backDelay: 1500,
+        loop: true,
+      });
+
+      // Tema escuro/claro com persistência localStorage
+      const themeToggle = document.getElementById('themeToggle');
+      const body = document.body;
+      const icon = themeToggle.querySelector('i');
+
+      function setTheme(dark) {
+        if(dark) {
+          body.classList.add('dark-theme');
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          body.classList.remove('dark-theme');
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      }
+
+      // Carregar preferência do tema
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme === 'dark') {
+        setTheme(true);
+      } else {
+        setTheme(false);
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = body.classList.contains('dark-theme');
+        setTheme(!isDark);
+        localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
